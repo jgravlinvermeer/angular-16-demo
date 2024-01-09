@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {SelfClosingComponent} from './components/self-closing/self-closing.component';
+import {RequiredInputComponent} from './components/required-input/required-input.component';
+import {RouterInputComponent} from "./components/router-input/router-input.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RequiredInputComponent,
+    RouterInputComponent,
+    SelfClosingComponent,
   ],
   imports: [
     BrowserModule,
