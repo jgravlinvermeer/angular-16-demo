@@ -16,7 +16,11 @@ export const routes: Routes = [
   { path: 'standalone', loadComponent: () => import('./components/standalone/standalone.component').then(m => m.StandaloneComponent) },
   { path: 'routerInput', children: [
       { path: '', component: RouterInputComponent },
+      { path: ':routeParam', component: RouterInputComponent },
     ],
+    resolve: {
+      data: () => "here's data!"
+    }
   },
   { path: '', component: HomeComponent },
   { path: '**', redirectTo: '' },
