@@ -9,7 +9,19 @@
     routeParam: <pre>{{ routeParam }}</pre>
   </div>
 
+  <div *ngIf="(routeParams$ | async) as _routeParams">
+    <div *ngIf="hasProps(_routeParams)">
+      routeParams$: <pre>{{ _routeParams | json }}</pre>
+    </div>
+  </div>
+
   <div *ngIf="queryParam">
     queryParam: <pre>{{ queryParam }}</pre>
+  </div>
+
+  <div *ngIf="(queryParams$ | async) as _queryParams">
+    <div *ngIf="hasProps(_queryParams)">
+      queryParams$: <pre>{{ _queryParams | json }}</pre>
+    </div>
   </div>
 </div>
