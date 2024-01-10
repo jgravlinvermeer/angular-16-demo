@@ -14,7 +14,10 @@ export const routes: Routes = [
   { path: 'takeUntilDestroyed', component: TakeUntilDestroyedComponent },
   { path: 'takeUntilForever', component: TakeUntilForeverComponent },
   { path: 'standalone', loadComponent: () => import('./components/standalone/standalone.component').then(m => m.StandaloneComponent) },
-  { path: 'routerInput', component: RouterInputComponent,
+  { path: 'routerInput', children: [
+      { path: '', component: RouterInputComponent },
+      { path: ':routeParam', component: RouterInputComponent },
+    ],
     resolve: {
       data: () => "here's data!"
     }

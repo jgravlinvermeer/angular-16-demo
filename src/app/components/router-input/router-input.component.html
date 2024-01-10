@@ -1,5 +1,11 @@
 <div>
   <h1 class="font">I am a router input component</h1>
 
-  {{ data }}
+  <div>
+    data: <pre>{{ data }}</pre>
+  </div>
+
+  <div *ngIf="routeParam">
+    routeParam: <pre>{{ routeParam }}</pre>
+  </div>
 </div>

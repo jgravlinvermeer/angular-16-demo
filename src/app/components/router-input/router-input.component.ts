@@ -7,4 +7,5 @@ import {Component, Input} from '@angular/core';
 })
 export class RouterInputComponent {
   @Input() data: string;
+  @Input() routeParam: string | undefined;
 }
