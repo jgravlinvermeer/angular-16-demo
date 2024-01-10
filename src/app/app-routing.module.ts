@@ -4,6 +4,7 @@ import {RouterInputComponent} from "./components/router-input/router-input.compo
 import {TakeUntilDestroyedComponent} from "./components/take-until-destroyed/take-until-destroyed.component";
 import {TakeUntilForeverComponent} from "./components/take-until-forever/take-until-forever.component";
 import {HomeComponent} from "./components/home/home.component";
+import {StandaloneComponent} from "./components/standalone/standalone.component";
 
 export const routes: Routes = [
   {
@@ -12,6 +13,7 @@ export const routes: Routes = [
   },
   { path: 'takeUntilDestroyed', component: TakeUntilDestroyedComponent },
   { path: 'takeUntilForever', component: TakeUntilForeverComponent },
+  { path: 'standalone', loadComponent: () => import('./components/standalone/standalone.component').then(m => m.StandaloneComponent) },
   { path: '', component: HomeComponent },
   { path: '**', redirectTo: '' },
 ];

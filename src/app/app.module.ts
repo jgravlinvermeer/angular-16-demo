@@ -18,7 +18,7 @@ import { HomeComponent } from './components/home/home.component';
     SelfClosingComponent,
     TakeUntilDestroyedComponent,
     TakeUntilForeverComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
