@@ -14,12 +14,17 @@ export const routes: Routes = [
   { path: 'takeUntilDestroyed', component: TakeUntilDestroyedComponent },
   { path: 'takeUntilForever', component: TakeUntilForeverComponent },
   { path: 'standalone', loadComponent: () => import('./components/standalone/standalone.component').then(m => m.StandaloneComponent) },
+  { path: 'routerInput', component: RouterInputComponent,
+    resolve: {
+      data: () => "here's data!"
+    }
+  },
   { path: '', component: HomeComponent },
   { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { bindToComponentInputs: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-router-input',
@@ -6,4 +6,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./router-input.component.scss']
 })
 export class RouterInputComponent {
+  @Input() data: string;
 }
