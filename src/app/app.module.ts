@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import {SelfClosingComponent} from './components/self-closing/self-closing.component';
 import {RequiredInputComponent} from './components/required-input/required-input.component';
 import {RouterInputComponent} from "./components/router-input/router-input.component";
+import { TakeUntilDestroyedComponent } from './components/take-until-destroyed/take-until-destroyed.component';
+import { TakeUntilForeverComponent } from './components/take-until-forever/take-until-forever.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +16,9 @@ import {RouterInputComponent} from "./components/router-input/router-input.compo
     RequiredInputComponent,
     RouterInputComponent,
     SelfClosingComponent,
+    TakeUntilDestroyedComponent,
+    TakeUntilForeverComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

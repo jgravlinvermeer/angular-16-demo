@@ -1,1 +1,15 @@
+<h1>{{ title }}</h1>
+
+<hr>
+
+<nav>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path" routerLinkActive="active">{{ route.path || 'home' }}</a>
+    </li>
+  </ul>
+</nav>
+
+<hr>
+
 <router-outlet></router-outlet>
